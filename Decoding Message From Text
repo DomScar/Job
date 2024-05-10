@@ -1,0 +1,18 @@
+def decode(message_file):
+  #read the contents of the input file
+  with open(message_file, 'r')as file:
+    lines = file.readlines()
+
+  #Parse the contents of the file to extract numbers and words
+  pyramid = [line.strip().plit(' ', 1)[1] for line in lines]
+
+  #decode the message using the extracted words
+  decoded_message = ' '
+  for i, word in enumerate(pyramid):
+    decoded_message += word + ' '
+
+    #return the decoded message
+    Return decoded_message.strip()
+
+  decoded_message = decode('message_file')
+  print(decoded_message)
