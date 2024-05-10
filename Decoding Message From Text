@@ -1,6 +1,6 @@
-def decode(message_file):
+def decode(textfile):
   #read the contents of the input file
-  with open(message_file, 'r')as file:
+  with open(textfile, 'r')as file:
     lines = file.readlines()
 
   #Parse the contents of the file to extract numbers and words
@@ -14,5 +14,5 @@ def decode(message_file):
     #return the decoded message
     Return decoded_message.strip()
 
-  decoded_message = decode('message_file')
+  decoded_message = decode('textfile')
   print(decoded_message)
